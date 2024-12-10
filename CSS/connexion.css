@@ -1,0 +1,55 @@
+/*CSS de la page de connexion*/
+.radio-form {
+    text-align: center;
+    margin: 10px;
+}
+
+.test {
+    margin-right: 7%;
+}
+
+form.forms input:not(.file) {
+    display: block;
+    margin: 10px auto;
+    width: 70%;
+    height: 25px;
+    border-radius: 15px;
+}
+
+.forms {
+    text-align: center;
+}
+
+.btn {
+    width: 35%;
+    height: 35px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
+    cursor: pointer;
+    background: white;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+fieldset {
+    margin: 20px;
+}
+
+.file {
+    display: block;
+    margin: 10px auto;
+}
+
+@media screen and (min-width : 768px) {
+    .btn {
+        width: 25%;
+    }
+
+    form.forms input:not(.file) {
+        width: 50%;
+    }
+}

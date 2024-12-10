@@ -1,0 +1,27 @@
+/*CSS de la page de lore*/
+
+.image {
+    height: 180px;
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+p {
+    margin: 2%;
+}
+
+@media screen and (min-width : 620px) {
+    .image {
+        height: 400px;
+        width: 600px;
+    }
+}
+
+@media screen and (min-width : 1000px) {
+    .image {
+        height: 550px;
+        width: 950px;
+    }
+}

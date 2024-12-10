@@ -1,0 +1,15 @@
+/*CSS des liens de pagination en bas de la page articles*/
+
+.pagination > a {
+    text-decoration: none;
+    color: black;
+}
+
+.pagination > a:hover {
+    text-decoration: underline;
+}
+
+.pagination {
+    text-align: center;
+    margin: 10px;
+}

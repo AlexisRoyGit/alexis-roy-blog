@@ -1,0 +1,298 @@
+/*CSS global présent dans toutes les pages*/
+
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+html, body {
+    margin : 0;
+    padding: 0;
+    font-family: 'Young Serif', serif;
+    font-size: 13px;
+    background : linear-gradient(45deg,#d7d2cc, #304352);
+}
+
+/*Barre de navigation*/
+.nav {
+    display: grid;
+    grid-template: 80px / 1fr 1fr 1fr;
+    background-color: black;
+}
+
+.logo {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%; 
+}
+
+.logo-place {
+    grid-column: 2 / 2; 
+}
+
+.burger {
+    grid-column: 3 / 3;
+}
+
+/*Menu mobile*/
+.side-nav {
+    position: fixed;
+    right: -210px;
+    height: 100vh;
+    width: 210px;
+    padding-top: 70px;
+    transition: right 0.5s ease;
+    z-index: 1;
+    background-color: lightgrey;
+}
+
+.side-nav  ul {
+    list-style: none;
+    margin-top: 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.side-nav > ul li {
+    margin-top: 25px;
+}
+
+.list {
+    text-decoration: none;
+    color: black;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    font-size: 35px;
+    text-decoration: none;
+    color: black;
+}
+
+/*Classe deploiement menu*/
+.active {
+    right: 0px;
+}
+
+/*Masquer liens nav + formulaire*/
+.undisplayed {
+    display: none;
+}
+
+/*Centrer avec flex*/
+.center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Centrer les titres*/
+.title {
+    text-align: center;
+}
+
+/* Modal */
+.modal {
+    position:fixed; 
+    top:30vh; 
+    left:15vw;
+    width:65%; 
+    z-index:5; 
+    border: solid 2px black; 
+    background-color:lightblue; 
+    border-radius: 5px;
+    text-align: center;
+}
+
+.modal button {
+    display:block; 
+    margin:5px auto;
+    width:40%; 
+    height:25px;
+}
+
+/*Article résumé*/
+.article-resume {
+    border: solid 2px black;
+    background-color:cadetblue;
+    color: white;
+    display: grid;
+    grid-template-rows: 85px 1fr 40px;
+    grid-template-columns: 1fr 70px 210px;
+    margin: 10px auto;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    grid-row: 1 / 1;
+    grid-column: 2 / 2;
+    display: flex;
+    justify-self: right;
+    align-self: center;
+}
+
+.article-author {
+    grid-row: 1 / 1;
+    grid-column: 3 / 3;
+    display: flex;
+    justify-content: left;
+}
+
+.article-resume > a {
+    grid-row: 3 / 3;
+    grid-column: 1 / 1;
+    text-decoration: none;
+    margin: 3px;
+}
+
+.title-article {
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+    text-decoration: underline;
+    
+}
+
+.resume {
+    grid-row: 2 / 2;
+    grid-column: 1 / 4;
+}
+
+.button {
+    border-radius: 10px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: blue;
+    background-color: black;
+}
+
+.date-article {
+    grid-row: 3 / 3;
+    grid-column: 3 / 3;
+    display: flex;
+    justify-content: right;
+    margin-right: 5px;
+}
+
+/*Footer*/
+.footer {
+    display : grid;
+    grid-template: 50px 150px / 1fr 1fr;
+    background-color: black;
+    color: white;
+}
+
+.title-left {
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+}
+
+.title-right {
+    grid-row: 1 / 1;
+    grid-column: 2 / 2;
+}
+
+.list-left {
+    grid-row: 2 / 2;
+    grid-column: 1 / 1;
+    list-style: none;
+}
+
+.list-right {
+    grid-row: 2 / 2;
+    grid-column: 2 / 2;
+    list-style: none;
+}
+
+@media screen and (min-width : 600px) {
+    .article-resume {
+        width: 75%;
+        margin: 15px auto;
+    }
+}
+
+/*Passage desktop*/
+@media screen and (min-width : 768px) {
+
+    html, body {
+        font-size: 17px;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .nav {
+        display: grid;
+        grid-template: 100px / repeat(4, 1fr);
+        background-color: black;
+    }
+
+    .logo {
+        height: 90px;
+        width: 90px;
+        border-radius: 50%; 
+    }
+    
+    .logo-place {
+        grid-column: 1 / 1; 
+    }
+
+    .nav-lore {
+        grid-column: 2 / 2;
+    }
+
+    .nav-articles {
+        grid-column: 3 / 3;
+    }
+
+    .nav-connexion {
+        grid-column: 4 / 4;
+    }
+
+    .nav-lore, .nav-articles, .nav-connexion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+    }
+
+    .nav a:hover {
+        text-decoration: underline;
+    }
+
+    .modal {
+        width:50%; 
+        left:25vw;
+    }
+    
+    .modal button {
+        width:30%; 
+        height:30px;
+    }
+
+    .button {
+        height: 35px;
+        width: 40%;
+    }
+
+    .avatar {
+        justify-self: left;
+    }
+
+   
+}
+
+@media screen and (min-width : 900px) {
+    html, body {
+        font-size: 20px;
+    }
+
+    .button {
+        width: 160px;
+    }
+}

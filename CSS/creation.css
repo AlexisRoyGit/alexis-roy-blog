@@ -1,0 +1,49 @@
+/*CSS de la page de création d'un article*/
+
+form input, textarea, label, button  {
+    display: block;
+    margin: 15px auto;
+}
+
+label {
+    text-align: center;
+    font-weight: bold;
+}
+
+textarea {
+    border-radius: 5px;
+    box-shadow: 3px 3px 13px black;
+}
+
+button {
+    width: 40%;
+    height: 25px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+@media screen and (min-width : 768px) {
+    button {
+        width: 25%;
+    }
+
+    input[name="title"] {
+        width: 35%;
+        height: 25px;
+    }
+
+    textarea {
+        width: 40%;
+        height: 160px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    input[name="title"] {
+        width: 30%;
+    }
+}

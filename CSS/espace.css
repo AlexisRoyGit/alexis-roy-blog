@@ -1,0 +1,78 @@
+/*CSS de l'espace client*/
+
+.avatar-espace {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.center {
+    text-align: center;
+}
+
+.list-espace li{
+    text-align: center;
+    list-style: none;
+}
+
+.list-espace {
+    padding: 0;
+}
+
+.buttons {
+    display: grid;
+    grid-template: 40px / 1fr 1fr;
+}
+
+.button-espace {
+    height: 30px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+
+.deconnexion {
+    background-color: black;
+    color: red;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+    cursor: pointer;
+}
+
+.creation {
+    background-color: blue;
+    color: white;
+    grid-row: 1 / 1;
+    grid-column: 2 / 2;
+    cursor: pointer;
+}
+
+.placement-deco {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.placement-crea {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width : 768px) {
+    .buttons {
+        grid-template: 70px / 1fr 1fr;
+    }
+
+    .button-espace {
+        height: 50px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        width: 50%;
+    }
+
+    .avatar-espace {
+        width: 150px;
+        height: 150px;
+    }
+}

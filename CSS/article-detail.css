@@ -1,0 +1,147 @@
+/*CSS des articles détaillés*/
+
+.detail-title {
+    text-align: center;
+}
+
+.article-illustration {
+    display: block;
+    width: 90%;
+    height: 280px;
+    margin: 10px auto;
+    border-radius: 8px;
+    box-shadow: 8px 8px 10px black;
+}
+
+.detail-infos {
+    display: grid;
+    grid-template-rows: 65px;
+    grid-template-columns: 60px 1fr 1fr;
+}
+
+.detail-date {
+    grid-row: 1 / 1;
+    grid-column: 3 / 3;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.detail-name {
+    grid-row: 1 / 1;
+    grid-column: 2 / 2;
+    color: white;
+}
+
+.detail-avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    grid-column: 1 / 1;
+}
+
+.comment-form {
+    margin: 10px auto;
+    width: 85%;
+}
+
+form > input {
+    display: block;
+    margin: 7px auto;
+}
+
+form  {
+    text-align: center;
+}
+
+form > label {
+    display: block;
+}
+
+form > button {
+    display: block;
+    border-radius: 10px;
+    height: 25px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+form > button:hover {
+    background-color: black;
+    color: white;
+}
+
+.textarea {
+    width: 80%;
+    height: 150px;
+}
+
+.comment {
+    height: 160px;
+    display : grid;
+    grid-template: 50px 70px 40px / repeat(3, 1fr);
+    border: groove black;
+    background-color: white;
+    margin: 10px;
+}
+
+.comment-avatar {
+    width: 45px;
+    height: 45px;
+    float: left;
+    border-radius: 50%;
+}
+
+.identity {
+    grid-row: 1 / 1;
+    grid-column: 1 / 3;
+}
+
+.comment-date {
+    grid-row: 3 / 3;
+    grid-column: 3 / 3;
+    display: flex;
+    justify-content: end;
+    align-self: center;
+    margin-right: 5px;
+}
+
+.comment-text {
+    grid-row: 2 / 2;
+    grid-column: 1 / 4;
+}
+
+@media screen and (min-width : 500px) {
+    .article-illustration {
+        width: 75%;
+    }
+}
+
+@media screen and (min-width : 650px) {
+    form > button {
+        height: 35px;
+    }
+
+    .textarea {
+        height: 200px;
+    }
+}
+
+@media screen and (min-width : 850px) {
+    .article-illustration {
+        width: 60%;
+        height: 310px;
+    }
+}
+
+@media screen and (min-width : 1024px) {
+    .article-illustration {
+        width: 45%;
+        height: 350px;
+    }
+
+    .detail-date {
+        justify-content: end;
+        margin-right: 10px;
+    }
+}

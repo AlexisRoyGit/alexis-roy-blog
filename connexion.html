@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <meta name="description" content="Créez vous un compte fan et connectez-y vous afin de pouvoir poster des articles sur l'univers étendu de Warhammer!">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/connexion.css">
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.php" class="logo-place center-flex">
+            <img src="Médias/Warhammer.png" alt="Logo du site" class="logo">
+        </a>
+        <div id="side-nav" class="side-nav">
+            <a href="#" id="close" class="close">x</a>
+            <ul>
+                <li><a class="list" href="#">Se connecter</a></li>
+                <li><a class="list" href="lore.php">Lore</a></li>
+                <li><a class="list" href="articles.php">Articles</a></li>
+            </ul>
+        </div>
+        <div class="burger center-flex" id="burger-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="white" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </div>
+        <a href="lore.php" class="undisplayed nav-lore">Lore</a>
+        <a href="articles.php" class="undisplayed nav-articles">Articles</a>
+        <a href="#" class="undisplayed nav-connexion">Se connecter</a>
+    </nav>
+    <main>
+        <h1 class="title">Formulaire de connexion / inscription</h1>
+        <p class="title">Sélectionnez dynamiquement le formualire souhaité</p>
+        <form class="radio-form">
+            <label for="formconnexion">Connexion</label>
+            <input type="radio" name="formselection" id="formconnexion" checked class="test">
+            <label for="forminscription">Inscription</label>
+            <input type="radio" name="formselection" id="forminscription">
+        </form>
+        <fieldset id="connexion">
+            <legend class="title">Formulaire de connexion</legend>
+            <form method="post" action="Back/connexion.php" class="forms">
+                <label for="mail">Mail</label>
+                <input type="email" name="mail" id="mail" placeholder="Votre adresse mail" required>
+                <label for="password">Mot de passe</label>
+                <input type="password" name="password" id="password" placeholder="Votre mot de passe" required>
+                <button type="submit" class="btn">Se connecter</button>
+            </form>
+        </fieldset>
+        <fieldset class="undisplayed" id="inscription">
+            <legend class="title">Formulaire d'inscription</legend>
+            <form method="post" action="Back/inscription.php" enctype="multipart/form-data" class="forms">
+                <label for="email">Mail</label>
+                <input type="email" name="email" id="email" placeholder="Votre adresse mail" required>
+                <label for="pass">Mot de passe (10-25 caractères + 1 nombre et une majuscule au minimum)</label>
+                <input type="password" name="pass" id="pass" placeholder="Votre mot de passe" required>
+                <label for="pseudo">Votre pseudo (20 caractères maximum)</label>
+                <input type="text" name="pseudo" id="pseudo" placeholder="Votre pseudo" required>
+                <label for="avatar">Votre avatar</label>
+                <input type="file" name="avatar" id="avatar" required class="file">
+                <button type="submit" class="btn">S'inscrire</button>
+            </form>
+        </fieldset>
+    </main>
+    <footer class="footer">
+        <p class="title-left center-flex">Nous contacter</p>
+        <ul class="list-left">
+            <li>Notre téléphone : <a href="tel:0123456789">0123456789</a></li>
+            <li>Notre mail : <a href="mailto:mail@example.com">mail@example.com</a></li>
+        </ul>
+        <p class="title-right center-flex">Pour en savoir plus</p>
+        <ul class="list-right">
+            <li>Notre <a href="politiqueconf.html">Politique de confidentialité</a></li>
+            <li>Nos partenaires : <a href="#">Liste des partenaires</a></li>
+        </ul>
+    </footer>
+    <script src="JS/side-nav.js"></script>
+    <script src="JS/form.js"></script>
+</body>
+</html>
